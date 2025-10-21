@@ -73,7 +73,36 @@ a:hover{text-decoration:underline}
 .stats .num{font-size:28px;font-weight:800;color:var(--primary)}
 .stats .lab{color:var(--muted)}
 
-.person .avatar{height:160px;border-radius:12px;background:linear-gradient(135deg,var(--primary),var(--accent));opacity:.2;margin-bottom:8px}
+.person .avatar {
+  width:auto;
+  height:180;          /* default size for desktops */
+  object-fit:contain;  /* ensures full image fits inside */
+  border-radius:12px;
+  margin-bottom:12px;
+  background:none;
+  opacity:1;             /* keep full clarity */
+  transition:transform 0.3s ease; /* optional hover effect */
+}
+
+/* Optional hover style for a polished feel */
+.person .avatar:hover {
+  transform:scale(1.03);
+}
+
+/* Responsive adjustments */
+@media (max-width:980px) {
+  .person .avatar {
+    height:160px;        /* slightly smaller on tablets */
+  }
+}
+
+@media (max-width:600px) {
+  .person .avatar {
+    height:200px;        /* taller on small screens (auto-fit) */
+  }
+}
+
+
 
 .site-footer{border-top:1px solid var(--border);background:#fff}
 .footer-wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 0}
