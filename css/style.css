@@ -75,7 +75,7 @@ a:hover{text-decoration:underline}
 
 .person .avatar {
   width:auto;
-  height:180;          /* default size for desktops */
+  height:180px;          /* default size for desktops */
   object-fit:contain;  /* ensures full image fits inside */
   border-radius:12px;
   margin-bottom:12px;
